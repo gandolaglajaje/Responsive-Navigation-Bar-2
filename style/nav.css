@@ -1,0 +1,124 @@
+:root{
+  --clr-primary: #F3F1E7;
+  --fnt-clr1: #172601;
+  --fnt-clr2: #D97014;
+  --fnt-primary: 'Oswald', sans-serif;
+}
+
+.nav-container{
+  font-family: var(--fnt-primary);
+  background-color: var(--clr-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 170px;
+  height: fit-content;
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.link-btn, ul, a{
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: #172601;
+}
+
+
+.link-btn li{
+  padding: 0px 20px;
+}
+
+li a:hover{
+  color: var(--fnt-clr2);
+}
+
+button:hover{
+  background: linear-gradient(to bottom left,orange, #D97014);
+}
+
+button{
+  align-self: center;
+  height: fit-content;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom right,orange, #D97014);
+  font-family: var(--fnt-primary);
+  border: none;
+  color: var(--fnt-clr1);
+  padding: .400rem 1.2rem .400rem 1.2rem;
+  font-size: 1.8rem;
+}
+
+
+.toggle-button {
+  position: absolute;
+  top: 2.65rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--fnt-clr2);
+  border-radius: 10px;
+}
+
+
+@media (max-width: 790px) {
+  .toggle-button{
+    display: flex;
+  }
+
+  .logo{
+    padding: 1rem;
+  }
+
+  .link-btn{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    font-family: var(--fnt-primary);
+  }
+    
+  ul{
+    padding-left: 0;
+    width: 100%;
+    display: block;
+    margin: 1rem;
+  }  
+
+  a{
+    justify-content: center;
+  }
+
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    margin-bottom: 1rem;
+    
+  }
+
+
+  .link-btn.active {
+    display: flex;
+  }
+}
+
+
+
